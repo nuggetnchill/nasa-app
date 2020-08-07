@@ -7,7 +7,7 @@ const Home = () => (
       NASA Photo of the day
     </Link>
     <Link className='home-link' to='/marsphoto'>
-      Mars Photo
+      Mars Rover Photo
     </Link>
   </div>
 );

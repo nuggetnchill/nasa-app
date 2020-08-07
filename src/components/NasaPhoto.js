@@ -15,6 +15,7 @@ const NasaPhoto = () => {
       );
       const data = await res.json();
       setPhotoData(data);
+      // console.log(data);
     };
     fetchPhoto();
   }, []);
@@ -26,7 +27,7 @@ const NasaPhoto = () => {
       <NavBar />
       <div className='nasa-photo-container'>
         {photoData.media_type === "image" ? (
-          <img className='photo' src='{photoData.url}' alt={photoData.title} />
+          <img className='photo' src={photoData.url} alt={photoData.title} />
         ) : (
           <iframe
             title='space-video'
@@ -40,6 +41,7 @@ const NasaPhoto = () => {
         )}
         <div>
           <h1> {photoData.title} </h1>
+          <p className='copytight'>By: {photoData.copyright}</p>
           <p className='date'> {photoData.date} </p>
           <p className='explanation'> {photoData.explanation} </p>
         </div>
