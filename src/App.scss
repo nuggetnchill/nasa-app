@@ -26,8 +26,8 @@ body {
 .link {
   color: #f5a30a;
   display: inline-block;
-  padding: 3px 20px;
-  font-size: 16px;
+  padding: 1px 20px;
+  font-size: 20px;
   text-decoration: none;
   transition: 0.3s ease all;
 }
@@ -35,6 +35,7 @@ body {
 .link:hover {
   color: #a56f0b;
   transform: scale(1.3);
+  text-decoration: none;
 }
 
 .nasa-photo-container {
@@ -100,4 +101,46 @@ body {
 
 .home-link:hover {
   transform: scale(1.3);
+}
+
+.mars-container {
+  h1 {
+    text-align: center;
+    padding: 100px;
+  }
+
+  background-color: rgba(63, 49, 77, 0.5);
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .img-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    padding: 1rem;
+
+    img {
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.backdrop img {
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 6px 10px 14px rgba(0, 0, 0, 0.8);
+  border: 10px solid rgba(12, 12, 12, 0.836);
+  border-radius: 10px;
 }

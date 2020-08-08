@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 
-const MarsPhotoElement = () => {
+const MarsPhotoElement = ({ setSelectedImg }) => {
   const [photoData, setPhotoData] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -17,38 +18,69 @@ const MarsPhotoElement = () => {
     };
 
     fetchPhoto();
-    console.log("submit clicked");
+    setSelectedDate(null);
   };
 
   if (!photoData)
     return (
-      <>
+      <div className='container'>
         <div>Please select a date</div>
         <input
           type='date'
           onChange={(event) => setSelectedDate(event.target.value)}
           dateformat='yyyy/MM/dd'
           min='2012-08-06'
+          max={new Date().toISOString().split("T")[0]} //max date to choose is today
         />
-        <button onClick={onButtonSubmit}>Submit</button>
-      </>
+        {selectedDate && (
+          <button className='btn btn-warning' onClick={onButtonSubmit}>
+            Submit
+          </button>
+        )}
+      </div>
     );
 
   const photos = photoData.photos.map((el) => el.img_src);
 
   return (
-    <>
+    <div className='mars-container'>
       <input
         type='date'
         onChange={(event) => setSelectedDate(event.target.value)}
         dateformat='yyyy/MM/dd'
         min='2012-08-06'
       />
-      <button onClick={onButtonSubmit}>Submit</button>
-      {photos.map((photo, i) => {
-        return <img alt='whatever' src={photo} key={i} />;
-      })}
-    </>
+      {selectedDate && (
+        <button className='btn btn-warning' onClick={onButtonSubmit}>
+          Submit
+        </button>
+      )}
+
+      {photoData.photos.length === 0 && (
+        <h1 className='h1'>Sorry no photos were taken on this date 😔 </h1>
+      )}
+
+      <motion.div className='img-wrap' layout>
+        {photos.map((photo, i) => {
+          return (
+            <motion.img
+              className='img-fluid'
+              alt='heyo'
+              src={photo}
+              key={i}
+              onClick={() => setSelectedImg(photo)}
+              initial={{ scale: 0 }}
+              animate={{ rotate: 360, scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+              }}
+            />
+          );
+        })}
+      </motion.div>
+    </div>
   );
 };
 
