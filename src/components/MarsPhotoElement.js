@@ -15,6 +15,7 @@ const MarsPhotoElement = ({ setSelectedImg }) => {
       const res = await fetch(apiLink);
       const data = await res.json();
       setPhotoData(data);
+      console.log(data);
     };
 
     fetchPhoto();
@@ -40,7 +41,9 @@ const MarsPhotoElement = ({ setSelectedImg }) => {
       </div>
     );
 
+  // ACCESSING API data
   const photos = photoData.photos.map((el) => el.img_src);
+  const information = photoData.photos[0];
 
   return (
     <div className='mars-container'>
@@ -59,6 +62,13 @@ const MarsPhotoElement = ({ setSelectedImg }) => {
       {photoData.photos.length === 0 && (
         <h1 className='h1'>Sorry no photos were taken on this date 😔 </h1>
       )}
+
+      <h2>Earth Date: {information.earth_date}</h2>
+      <h2>
+        {" "}
+        <a href='https://en.wikipedia.org/wiki/Sol_(day_on_Mars)'>Sol:</a>
+        <span> {information.sol}</span>
+      </h2>
 
       <motion.div className='img-wrap' layout>
         {photos.map((photo, i) => {
