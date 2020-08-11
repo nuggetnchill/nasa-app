@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { trackPromise } from "react-promise-tracker";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 
@@ -12,7 +13,7 @@ const MarsPhotoElement = ({ setSelectedImg }) => {
 
   const onButtonSubmit = () => {
     const fetchPhoto = async () => {
-      const res = await fetch(apiLink);
+      const res = await trackPromise(fetch(apiLink));
       const data = await res.json();
       setPhotoData(data);
       console.log(data);
@@ -58,7 +59,6 @@ const MarsPhotoElement = ({ setSelectedImg }) => {
           Submit
         </button>
       )}
-
       {photoData.photos.length === 0 && (
         <h1 className='h1'>Sorry no photos were taken on this date 😔 </h1>
       )}

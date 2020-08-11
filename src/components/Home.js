@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Home = () => (
   <div className='home'>
@@ -9,6 +10,7 @@ const Home = () => (
     <Link className='home-link' to='/marsphoto'>
       👽 Mars Rover Photo
     </Link>
+    <Footer />
   </div>
 );
 
