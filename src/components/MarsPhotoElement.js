@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { trackPromise } from "react-promise-tracker";
 
-const apiKey = process.env.NASA_KEY;
+const apiKey = process.env.REACT_APP_NASA_KEY;
 
 const MarsPhotoElement = ({ setSelectedImg }) => {
   const [photoData, setPhotoData] = useState(null);

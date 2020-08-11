@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import NavBar from "./NavBar";
 
-const apiKey = process.env.NASA_KEY;
+const apiKey = process.env.REACT_APP_NASA_KEY;
 
 const NasaPhoto = () => {
   const [photoData, setPhotoData] = useState(null);
