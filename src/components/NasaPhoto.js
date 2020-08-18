@@ -41,7 +41,7 @@ const NasaPhoto = () => {
         )}
         <div>
           <h1> {photoData.title} </h1>
-          <p className='copytight'>By: {photoData.copyright}</p>
+          <p className='copyright'>{photoData.copyright}</p>
           <p className='date'> {photoData.date} </p>
           <p className='explanation'> {photoData.explanation} </p>
         </div>
