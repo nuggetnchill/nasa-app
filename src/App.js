@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
 import NasaPhoto from "./components/NasaPhoto";
 import MarsPhoto from "./components/MarsPhoto";
+import ISSTracker from "./components/ISSTracker";
 
 import "./App.scss";
 
@@ -15,6 +16,7 @@ function App() {
         <Route exact path='/' component={Home} />
         <Route path='/nasaphoto' component={NasaPhoto} />
         <Route path='/marsphoto' component={MarsPhoto} />
+        <Route path='/isstracker' component={ISSTracker} />
       </div>
     </BrowserRouter>
   );
