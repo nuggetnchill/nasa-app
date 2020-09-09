@@ -1,7 +1,23 @@
-# NASA APP
-
-## made with ReactJs and NASA API
+# Space Exploration App 
 
 [Check it out here](https://space-explore.netlify.app/)
 
-![](https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/02813/opgs/edr/ncam/NRB_647213998EDR_S0810628NCAM00595M_.JPG)
+![](https://media.giphy.com/media/dzIq0OzUaErnz9Qf4b/giphy.gif)
+### **Features**
+
+- International Space Station real time tracking
+- Astronomical Photo of the day
+- Mars Photos taken by Rover Curiosity Robot
+
+
+### **Description**
+
+As a space enthusiast, it was really interesting and fun to put this together, I learned a lot about utilizing API within my React Application, and it motivated me to read through some Documentations as well.
+
+### **Tech Stack**
+
+- React
+- SASS
+- Git & Github
+- Netlify Deployment
+- [NASA API](https://api.nasa.gov/), [Where The ISS At?](https://wheretheiss.at/)
