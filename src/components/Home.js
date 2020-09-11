@@ -14,6 +14,9 @@ const Home = () => (
     <Link className='home-link' to='/isstracker'>
       🛰️ International Space Station
     </Link>
+    <Link className='home-link' to='/missions'>
+      🚀 SpaceX Missions
+    </Link>
     <Footer />
   </div>
 );
