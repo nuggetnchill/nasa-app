@@ -3,9 +3,11 @@ import React, { useState, useEffect } from "react";
 
 import NavBar from "./NavBar";
 import Mission from "./Mission";
+import DropDown from "./DropDown";
 
 const SpaceXMissions = () => {
   const [launchData, setLaunchData] = useState([]);
+  const [active, setActive] = useState(false); //for dropdown toggle
 
   const api_url = "https://api.spacexdata.com/v4/launches/";
   const getData = async () => {
@@ -28,16 +30,34 @@ const SpaceXMissions = () => {
     getData();
   }, []);
 
+  const toggle = () => {
+    setActive(!active);
+  };
+
   return (
     <>
       <NavBar />
-      {/* {allPatches.map((patch) => {
-        return <Mission patch={patch} />;
-      })} */}
+      <button onClick={toggle}>Test</button>
+
       {launchData.map((el, i) => {
         const patch = el.links.patch.small;
         const name = el.name;
-        return <Mission key={i} patch={patch} name={name} />;
+        const details = el.details;
+
+        const rawDate = new Date(el.date_utc);
+        const date = `${
+          rawDate.getMonth() + 1
+        }/${rawDate.getDate()}/${rawDate.getFullYear()}`;
+
+        return (
+          <>
+            <Mission key={i} patch={patch} name={name} date={date} />
+            <DropDown active={active}>
+              <h1>{details}</h1>
+              <h1>HIIIII</h1>
+            </DropDown>
+          </>
+        );
       })}
     </>
   );
