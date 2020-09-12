@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import fallback from "../assets/fallback-logo.png";
 
 const Mission = ({ launch }) => {
   const [active, setActive] = useState(false); //for toggling dropdown
@@ -22,45 +23,52 @@ const Mission = ({ launch }) => {
 
   return (
     <div className='mission'>
-      <img src={patch} alt={name} onClick={toggle} />
-      <h1>{name}</h1>
-      <span>
-        {success ? (
-          <h3 className='accomplished'>(Accomplished)</h3>
-        ) : (
-          <h3 className='failed'>(Failed) </h3>
-        )}
-      </span>
-      <h2>{date}</h2>
+      <img
+        src={patch ? patch : fallback}
+        alt={name + " logo is missing "}
+        onClick={toggle}
+      />
+      <h1 className='mission-name'>{name}</h1>
+      <h2 className='mission-date'>{date}</h2>
+      {success ? (
+        <h3 className='accomplished'>Accomplished</h3>
+      ) : (
+        <h3 className='failed'>Failed </h3>
+      )}
+
+      {/* Popup are */}
       {active ? (
-        <div className='more-info'>
-          <h3>{details}</h3>
-          <ul className='links'>
-            <li>
-              {article && (
-                <a href={article} target='_blank' rel='noopener noreferrer'>
-                  Article
-                </a>
-              )}
-            </li>
-            <li>
-              {wikipedia && (
-                <a href={wikipedia} target='_blank' rel='noopener noreferrer'>
-                  Wikipedia
-                </a>
-              )}
-            </li>
-          </ul>
-          {youtube_id && (
-            <iframe
-              title={name}
-              width='420'
-              height='315'
-              src={`https://www.youtube.com/embed/${youtube_id}`}
-              frameBorder='0'
-              allowFullScreen
-            ></iframe>
-          )}
+        <div className='mission-backdrop' onClick={toggle}>
+          <div className='more-info'>
+            {youtube_id && (
+              <iframe
+                className='video'
+                title={name}
+                //   width='420'
+                // height='315'
+                src={`https://www.youtube.com/embed/${youtube_id}`}
+                frameBorder='0'
+                allowFullScreen
+              ></iframe>
+            )}
+            <div className='mission-details'>{details}</div>
+            <ul className='links'>
+              <li>
+                {article && (
+                  <a href={article} target='_blank' rel='noopener noreferrer'>
+                    Article
+                  </a>
+                )}
+              </li>
+              <li>
+                {wikipedia && (
+                  <a href={wikipedia} target='_blank' rel='noopener noreferrer'>
+                    Wikipedia
+                  </a>
+                )}
+              </li>
+            </ul>
+          </div>
         </div>
       ) : null}
     </div>
