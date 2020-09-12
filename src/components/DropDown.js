@@ -5,3 +5,6 @@ const DropDown = ({ active, children }) => {
 };
 
 export default DropDown;
+
+//unused component
+//keeping this for future reference tho :)
