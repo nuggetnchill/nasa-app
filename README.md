@@ -6,6 +6,7 @@
 ### **Features**
 
 - International Space Station real time tracking
+- Collection of SpaceX Launch Missions
 - Astronomical Photo of the day
 - Mars Photos taken by Rover Curiosity Robot
 
@@ -20,4 +21,4 @@ As a space enthusiast, it was really interesting and fun to put this together, I
 - SASS
 - Git & Github
 - Netlify Deployment
-- [NASA API](https://api.nasa.gov/), [Where The ISS At?](https://wheretheiss.at/)
+- [NASA API](https://api.nasa.gov/), [Where The ISS At?](https://wheretheiss.at/), [SpaceX API](https://github.com/thefrankharvey/spacex/blob/master/src/App.js)
