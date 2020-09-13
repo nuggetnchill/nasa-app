@@ -51,7 +51,11 @@ const Mission = ({ launch }) => {
                 allowFullScreen
               ></iframe>
             )}
-            <div className='mission-details'>{details}</div>
+            {details ? (
+              <div className='mission-details'>{details}</div>
+            ) : (
+              <p>Sorry,there is currently no detail about this launch</p>
+            )}
             <ul className='links'>
               <li>
                 {article && (

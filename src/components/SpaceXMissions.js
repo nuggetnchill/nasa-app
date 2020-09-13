@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import Mission from "./Mission";
 
 import "./SpaceXMissions.scss";
+import Logo from "../assets/spacex-logo.png";
 
 const SpaceXMissions = () => {
   const [launchData, setLaunchData] = useState([]);
@@ -33,10 +34,17 @@ const SpaceXMissions = () => {
   return (
     <>
       <NavBar />
-      <div className='missions-container'>
-        {launchData.map((launch, i) => {
-          return <Mission launch={launch} key={i} />;
-        })}
+      <div className='spacex-container'>
+        <div className='hero-img'>
+          <div className='hero-logo'>
+            <img alt='spacex logo' src={Logo} />
+          </div>
+        </div>
+        <div className='missions-container'>
+          {launchData.map((launch, i) => {
+            return <Mission launch={launch} key={i} />;
+          })}
+        </div>
       </div>
     </>
   );

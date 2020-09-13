@@ -1,10 +1,40 @@
-.missions-container {
-  max-width: 80vw;
+.spacex-container {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.hero-img {
   margin: auto;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/spacex_launch.jpg");
+  height: 40vh;
+  max-width: 100vw;
+  background-position: center 75%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .hero-logo {
+    img {
+      opacity: 60%;
+      max-width: 60vw;
+      filter: invert(100);
+    }
+    text-align: center;
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+}
+
+.missions-container {
+  position: relative;
+  min-width: 80vw;
+  max-width: 80vw;
+  margin: 5rem auto;
+  justify-content: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 250px));
   grid-gap: 20px;
 }
 
@@ -14,6 +44,11 @@
   text-align: center;
   img {
     width: 200px;
+    &:hover {
+      cursor: pointer;
+      transition: 0.5s;
+      transform: scale(1.2);
+    }
   }
   .mission-backdrop {
     position: fixed;
@@ -42,6 +77,9 @@
     .mission-details {
       font-size: 1.5rem;
     }
+    .links {
+      list-style-type: none;
+    }
   }
 }
 
@@ -62,4 +100,94 @@
 .failed {
   font-size: 1.2rem;
   color: rgba(247, 27, 27, 0.5);
+}
+
+@media (max-width: 750px) {
+  .mission-backdrop {
+    .more-info {
+      display: block;
+      max-width: 100vw;
+
+      margin: auto;
+      padding: 1rem;
+      box-shadow: 6px 10px 14px rgba(29, 29, 29, 0.9);
+      // border: 5px solid rgba(12, 12, 12, 0.836);
+      border-radius: 10px;
+      contain: content;
+      .video {
+        width: 70vw;
+        height: auto;
+      }
+      .mission-details {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .missions-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+    grid-gap: 50px;
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 611px) {
+  .missions-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+    grid-gap: 6rem;
+    max-width: 90vw;
+  }
+  .mission {
+    img {
+      width: 180px;
+    }
+    .mission-name {
+      margin: 1rem;
+      font-size: 1.5rem;
+    }
+    .mission-date {
+      font-size: 1rem;
+    }
+    .accomplished {
+      font-size: 1.2rem;
+
+      .failed {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .mission-backdrop {
+    .more-info {
+      .mission-details {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .missions-container {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 120px));
+    grid-gap: 3rem;
+
+    .mission {
+      img {
+        width: 120px;
+      }
+      .mission-name {
+        margin: 0.8rem;
+        font-size: 1rem;
+      }
+      .mission-date {
+        font-size: 0.8rem;
+      }
+      .accomplished {
+        font-size: 1rem;
+
+        .failed {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
