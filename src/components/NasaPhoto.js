@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { ClapButton } from "@lyket/react";
 
 import NavBar from "./NavBar";
 
@@ -41,6 +42,11 @@ const NasaPhoto = () => {
         )}
         <div>
           <h1> {photoData.title} </h1>
+          <ClapButton
+            id='apod-clap'
+            namespace='apod'
+            component={ClapButton.themes.Large}
+          />
           <p className='copyright'>{photoData.copyright}</p>
           <p className='date'> {photoData.date} </p>
           <p className='explanation'> {photoData.explanation} </p>

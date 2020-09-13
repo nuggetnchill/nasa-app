@@ -4,9 +4,13 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+import { Provider } from "@lyket/react";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider apiKey='ad49a81343dc5d0a790f9937ddcbbc'>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

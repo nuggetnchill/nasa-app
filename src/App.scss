@@ -85,6 +85,10 @@ body {
     color: cornflowerblue;
   }
 
+  #apod-clap {
+    filter: invert(100);
+  }
+
   .date {
     margin-top: 0;
     margin-bottom: 30px;
