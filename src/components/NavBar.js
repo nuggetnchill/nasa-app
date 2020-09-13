@@ -6,7 +6,7 @@ const NavBar = () => {
     <div className='nav-bar'>
       <ul>
         <Link className='link' to='/'>
-          🏠 Home
+          Home
         </Link>
       </ul>
     </div>

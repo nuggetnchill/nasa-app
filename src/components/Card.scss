@@ -24,7 +24,7 @@
     position: relative;
     flex-direction: column;
     height: 400px;
-    width: 300px;
+    width: 290px;
     min-width: 250px;
     padding: 1.5rem;
     border-radius: 16px;
@@ -76,6 +76,7 @@
   }
   h2 {
     cursor: pointer;
+    font-size: 1.8rem;
     word-spacing: -12px;
     font-weight: 600;
     &:hover {
