@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { ClapButton } from "@lyket/react";
 
-import NavBar from "./NavBar";
-import Mission from "./Mission";
+import NavBar from "../components/NavBar";
+import Mission from "../components/Mission";
 
 import "./SpaceXMissions.scss";
 import Logo from "../assets/spacex-logo.png";

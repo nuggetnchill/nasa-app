@@ -5,7 +5,7 @@ import { Map, TileLayer, Marker } from "react-leaflet";
 import { Icon } from "leaflet";
 import issLogo from "../assets/iss.png";
 
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar";
 
 const issIcon = new Icon({
   iconUrl: issLogo,

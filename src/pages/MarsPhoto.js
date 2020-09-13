@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import MarsPhotoElement from "./MarsPhotoElement";
-import NavBar from "./NavBar";
-import Modal from "./Modal";
+import MarsPhotoElement from "../components/MarsPhotoElement";
+import NavBar from "../components/NavBar";
+import Modal from "../components/Modal";
 
 import { usePromiseTracker } from "react-promise-tracker";
 import Loader from "react-loader-spinner";

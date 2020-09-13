@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { ClapButton } from "@lyket/react";
 
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 

@@ -2,11 +2,11 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Home from "./components/Home";
-import NasaPhoto from "./components/NasaPhoto";
-import MarsPhoto from "./components/MarsPhoto";
-import ISSTracker from "./components/ISSTracker";
-import SpaceXLMissions from "./components/SpaceXMissions";
+import Home from "./pages/Home";
+import NasaPhoto from "./pages/NasaPhoto";
+import MarsPhoto from "./pages/MarsPhoto";
+import ISSTracker from "./pages/ISSTracker";
+import SpaceXLMissions from "./pages/SpaceXMissions";
 
 import "./App.scss";
 
