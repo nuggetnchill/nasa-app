@@ -1,4 +1,5 @@
 # Space Exploration App 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b52f71c1-97df-4c91-a909-197ce256c97c/deploy-status)](https://app.netlify.com/sites/space-explore/deploys)
 
 [Check it out here](https://space-explore.netlify.app/)
 
