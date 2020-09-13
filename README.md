@@ -1,25 +1,46 @@
-# Space Exploration App 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b52f71c1-97df-4c91-a909-197ce256c97c/deploy-status)](https://app.netlify.com/sites/space-explore/deploys)
+# **Otter Space**
 
-[Check it out here](https://space-explore.netlify.app/)
+## [Visit here](https://space-explore.netlify.app/)
 
-![](https://media.giphy.com/media/dzIq0OzUaErnz9Qf4b/giphy.gif)
-### **Features**
-
-- International Space Station real time tracking
-- Collection of SpaceX Launch Missions
-- Astronomical Photo of the day
-- Mars Photos taken by Rover Curiosity Robot
-
+![](https://media.giphy.com/media/lqew5PLLSTHFbpnR6j/giphy.gif)
 
 ### **Description**
 
-As a space enthusiast, it was really interesting and fun to put this together, I learned a lot about utilizing API within my React Application, and it motivated me to read through some Documentations as well.
+As a space enthusiast, it was really interesting and fun to put this together, I learned a lot about utilizing a large scaled APIs within my React App, and it motivated me to read through some Documentations as well.
 
-### **Tech Stack**
+<br/>
 
-- React
+# Features
+
+- _International Space Station real time tracking_
+
+  ![ISS Tracker](/public/screenshots/iss.jpg)
+
+- _Collection of SpaceX Launch Missions_
+
+  ![SpaceX](/public/screenshots/spacex.jpg)
+
+- _Astronomical Photo of the day_
+
+  ![Apod](/public/screenshots/apod.jpg)
+
+- _Mars Photos taken by Rover Curiosity Robot_
+
+  ![Mars](/public/screenshots/mars.jpg)
+
+  <br/>
+
+# **Tech Stack**
+
+- REACT.js
 - SASS
 - Git & Github
 - Netlify Deployment
-- [NASA API](https://api.nasa.gov/), [Where The ISS At?](https://wheretheiss.at/), [SpaceX API](https://github.com/r-spacex/SpaceX-API)
+- API
+  - [NASA](https://api.nasa.gov/)
+  - [Where The ISS At?](https://wheretheiss.at/)
+  - [SpaceX](https://github.com/r-spacex/SpaceX-API)
+
+<br/>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b52f71c1-97df-4c91-a909-197ce256c97c/deploy-status)](https://app.netlify.com/sites/space-explore/deploys)
