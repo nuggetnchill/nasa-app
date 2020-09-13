@@ -14,19 +14,19 @@ As a space enthusiast, it was really interesting and fun to put this together, I
 
 - _International Space Station real time tracking_
 
-  ![ISS Tracker](/public/screenshots/iss.jpg)
+  ![ISS Tracker](https://github.com/nuggetnchill/nasa-app/blob/master/public/screenshots/iss.JPG)
 
 - _Collection of SpaceX Launch Missions_
 
-  ![SpaceX](/public/screenshots/spacex.jpg)
+  ![SpaceX](https://github.com/nuggetnchill/nasa-app/blob/master/public/screenshots/spacex.JPG)
 
 - _Astronomical Photo of the day_
 
-  ![Apod](/public/screenshots/apod.jpg)
+  ![Apod](https://github.com/nuggetnchill/nasa-app/blob/master/public/screenshots/apod.JPG)
 
 - _Mars Photos taken by Rover Curiosity Robot_
 
-  ![Mars](/public/screenshots/mars.jpg)
+  ![Mars](https://github.com/nuggetnchill/nasa-app/blob/master/public/screenshots/mars.JPG)
 
   <br/>
 
