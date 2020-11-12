@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
-import { useEffect, useState } from "react";
-import { Map, TileLayer, Marker } from "react-leaflet";
-import { Icon } from "leaflet";
-import issLogo from "../assets/iss.png";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import { Map, TileLayer, Marker } from 'react-leaflet';
+import { Icon } from 'leaflet';
+import issLogo from '../assets/iss.png';
 
-import NavBar from "../components/NavBar";
+import NavBar from '../components/NavBar';
 
 const issIcon = new Icon({
   iconUrl: issLogo,
@@ -16,10 +16,11 @@ const issIcon = new Icon({
 const ISSTracker = () => {
   const [latitude, setLatitude] = useState(37.6872);
   const [longitude, setLongitude] = useState(-97.3301);
+  const [center, setCenter] = useState([37.6872, -97.3301]);
   const [velocity, setVelocity] = useState(0);
 
   useEffect(() => {
-    const api_url = "https://api.wheretheiss.at/v1/satellites/25544";
+    const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
     const getISS = async () => {
       const response = await fetch(api_url);
       const data = await response.json();
@@ -30,17 +31,29 @@ const ISSTracker = () => {
     };
 
     getISS().catch((error) => {
-      console.log("UHHHH WHAT HAPPENED? " + error);
+      console.log('UHHHH WHAT HAPPENED? ' + error);
     });
 
     setInterval(getISS, 1000);
   }, []);
+  const recenterView = () => {
+    setCenter([latitude, longitude]);
+  };
 
   return (
     <div>
       <NavBar />
+      <button
+        className='btn btn-warning'
+        style={{
+          margin: '0.5rem',
+        }}
+        onClick={recenterView}
+      >
+        Where is it?
+      </button>
       <div className='leaflet-container'>
-        <Map center={[latitude, longitude]} zoom={3}>
+        <Map center={center} zoom={4}>
           <TileLayer
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
