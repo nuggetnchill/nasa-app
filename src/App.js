@@ -7,6 +7,8 @@ import NasaPhoto from "./pages/NasaPhoto";
 import MarsPhoto from "./pages/MarsPhoto";
 import ISSTracker from "./pages/ISSTracker";
 import SpaceXLMissions from "./pages/SpaceXMissions";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 import "./App.scss";
 
@@ -19,6 +21,8 @@ function App() {
         <Route path='/marsphoto' component={MarsPhoto} />
         <Route path='/isstracker' component={ISSTracker} />
         <Route path='/missions' component={SpaceXLMissions} />
+        <Route path='/login' component={Login} />
+        <Route path='/register' component={Register} />
       </div>
     </BrowserRouter>
   );
